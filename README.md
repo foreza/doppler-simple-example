@@ -13,8 +13,8 @@ Our goal would be to remove the .env file and have Doppler manage this for us, i
 
 1. Clone the repository:
 ```bash
-git clone <your-repository-url>
-cd <repository-name>
+git clone https://github.com/foreza/doppler-simple-example.git
+cd doppler-simple-example
 ```
 
 2. Install dependencies:
@@ -30,17 +30,22 @@ API_KEY=your-secret-api-key
 
 ## Running the Application
 
-1. Build and start the application:
+1. For development (with auto-reload):
+```bash
+npm run dev
+```
+
+2. For production:
 ```bash
 npm run build
 ```
 
-This command will:
+The build command will:
 - Update the build timestamp
 - Start the server
 - Display the API key in red in the console (for development purposes)
 
-2. Access the application:
+3. Access the application:
 - Open your browser and navigate to `http://localhost:3000` (or whatever port you specified in .env)
 - You'll see:
   - The current port number
@@ -53,6 +58,7 @@ This command will:
 - Views are rendered using Jade template engine
 - Environment variables are managed using dotenv
 - Build information is stored in `build-info.json`
+- Development mode includes auto-reload using nodemon
 
 ## Security Notes
 
@@ -64,6 +70,7 @@ This command will:
 
 - `npm start`: Starts the server
 - `npm run build`: Updates build timestamp and starts the server
+- `npm run dev`: Starts the server with auto-reload for development
 
 ## File Structure
 

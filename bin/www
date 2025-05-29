@@ -87,4 +87,7 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
+  
+  // Print port in red text
+  console.error('\n\x1b[31mServer running on port: ' + addr.port + '\x1b[0m\n');
 }
