@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  p I am a cursor edited PROJECT
+  
+  .info-container
+    h2 System Information
+    p Port: #{port}
+    p Last Build: #{buildTime}
+    p API Key: #{maskedApiKey}
